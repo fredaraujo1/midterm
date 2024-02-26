@@ -1,0 +1,9 @@
+import validators
+
+def is_valid_url(url):
+    return validators.url(url)
+
+url1 = "https://www.google.com"
+
+print(is_valid_url(url1))
+#true if valid

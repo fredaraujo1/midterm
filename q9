@@ -1,0 +1,13 @@
+from datetime import datetime
+def days_since_birthday(birthday):
+    birthdate = datetime.strptime(birthday, "%d-%m-%Y")
+    current_date = datetime.now()
+    birth_year = birthdate.year
+    current_year = current_date.year
+    years_passed = current_year - birth_year
+    if current_date.month < birthdate.month or (current_date.month == birthdate.month and current_date.day < birthdate.day):
+        years_passed -= 1
+    days_passed = years_passed * 365
+    return days_passed
+birthday = "14-03-2004"
+print("Days passed since birthday:", days_since_birthday(birthday))

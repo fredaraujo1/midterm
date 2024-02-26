@@ -1,0 +1,17 @@
+#Original
+
+my_list = [1, 2, 3, 4]
+print("original list:", my_list)
+#Modified
+my_list.remove(2)
+print("list after removing:", my_list)
+
+
+s = "hello"
+print("Original string:", s)
+# Attempting to modify the string (creates an error)
+try:
+    s[0] = 'H'
+except TypeError as e:
+    print("Error:", e)
+print("String after modification attempt:", s)
